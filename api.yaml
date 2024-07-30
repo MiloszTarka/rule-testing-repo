@@ -282,7 +282,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HeaterState2'
+                $ref: '#/components/schemas/HeaterState'
       x-swagger-router-controller: Environment
   '/temperature/{zoneId}/heater/{state}':
     post:
@@ -308,7 +308,7 @@ paths:
        content:
           application/json:
             schema:
-              $ref: '#/components/schemas/HeaterState2'
+              $ref: '#/components/schemas/HeaterState'
       responses:
         '200':
           description: Status of the operation
@@ -467,11 +467,6 @@ components:
         message:
           type: string
           example: everything is ok
-    HeaterState2:
-      type: object
-      properties:
-        heaterState:
-            $ref: '#/components/schemas/HeaterState'
     HeaterState:
       type: object
       properties:
